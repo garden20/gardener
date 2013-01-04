@@ -1,0 +1,17 @@
+{
+	"name": "garden-node-manager",
+	"version": "0.0.1",
+	"description": "Manages node installs/updates for node processes in the garden.",
+	"keywords" : [
+		"garden"
+	],
+	"config" : { 
+		"garden" : "http://localhost:5984/dashboard"
+	},
+	"scripts" : { 
+		"start" : "node server.js" 
+	},	
+	"dependencies": {
+
+	}
+}
