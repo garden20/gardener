@@ -26,6 +26,8 @@ feed.on('change', function(change) {
 feed.follow();
 npm_manager.init(function(err){
 	console.log('npm warmed started');
-	services.start();
+	services.start(function(err) {
+		
+	});
 })
 
