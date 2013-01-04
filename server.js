@@ -1,6 +1,6 @@
 var follow = require('follow'),
 	npm_manager = require('./lib/npm_manager'),
-	services = require('./lib/services'),
+	process_manager = require('./lib/process_manager'),
 	garden = process.env.npm_package_config_garden,
 	opts = {
 		include_docs : true,
@@ -25,9 +25,8 @@ feed.on('change', function(change) {
 
 feed.follow();
 npm_manager.init(function(err){
-	console.log('npm warmed started');
-	services.start(function(err) {
-		
+	process_manager.start(function(err) {
+
 	});
 })
 
