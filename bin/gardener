@@ -1,0 +1,42 @@
+#!/usr/bin/env node
+
+var path = require('path'),
+	npm_manager = require('../lib/npm_manager'),
+    commands = require('../lib/commands');
+
+
+var args = process.argv.slice(2);
+
+for (var i = 0; i < args.length; i += 1) {
+    if (args[i] === '--debug') {
+        args.splice(i, 1);
+    }
+}
+
+
+function usage() {
+    console.log('Usage: gardener COMMAND [ARGS]');
+    console.log('');
+    console.log('Available commands:');
+}
+
+if (!args.length) {
+    usage();
+}
+else {
+    var cmd = args.shift();
+    if (cmd === '-h' || cmd === '--help') {
+        usage();
+    }
+    else if (cmd in commands) {
+    	npm_manager.init(function() {
+    		commands[cmd](args, commands);
+    	});        
+    }
+    else {
+        console.err('No such command: ' + cmd);
+        usage();
+    }
+}
+
+

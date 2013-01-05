@@ -1,32 +1,5 @@
-var follow = require('follow'),
-	npm_manager = require('./lib/npm_manager'),
-	process_manager = require('./lib/process_manager'),
-	garden = process.env.npm_package_config_garden,
-	opts = {
-		include_docs : true,
-		db: garden,
-		since: 'now'
-	},
-	feed = new follow.Feed(opts);
+var garden_url = process.env.npm_package_config_garden,
+	Watcher = require('./lib/watcher'),
+	watcher = new Watcher(garden_url);
 
-feed.filter = function(doc, req) {
-    if (!doc.type || doc.type !== 'install' ) return false;
-    if (doc.removed) return false;
-    return true;
-}
-
-feed.on('error', function(er) {
-  //throw er;
-})
-
-feed.on('change', function(change) {
-  //console.log('Doc ' + change.id, change.doc.installed.db);
-})
-
-feed.follow();
-npm_manager.init(function(err){
-	process_manager.start(function(err) {
-
-	});
-})
-
+watcher.run();
