@@ -1,17 +1,35 @@
 {
-	"name": "garden-node-manager",
+	"name": "gardener",
 	"version": "0.0.1",
-	"description": "Manages node installs/updates for node processes in the garden.",
+	"description": "A node process manager for couchapps that have npm modules bundled with them.",
 	"keywords" : [
-		"garden"
+		"garden", "couchapp"
 	],
 	"config" : { 
 		"garden" : "http://localhost:5984/dashboard"
 	},
 	"scripts" : { 
 		"start" : "node server.js" 
-	},	
+	},
+	"directories": [
+		"bin", "lib"
+	],
 	"dependencies": {
-
-	}
+		"async": "0.1.22",
+		"follow": "0.8.0",
+		"forever-monitor": "1.1.0",
+		"npm": "1.1.70",
+		"request": "2.12.0",
+		"url": "0.7.9"
+	},
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/garden20/gardener.git"
+    },
+    "maintainers": [
+        {"name": "Ryan Ramage", "web": "https://github.com/ryanramage"}
+    ],    
+    "bin": {
+        "gardener": "./bin/gardener"
+    }
 }
