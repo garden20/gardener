@@ -16,6 +16,6 @@ The launched node process will be given the details of the couch including the u
 Useage
 ------
 
-npm install gardener
-./bin/gardener watch http://me.garden20.com
+    npm install gardener
+    ./bin/gardener watch http://me.garden20.com
 
