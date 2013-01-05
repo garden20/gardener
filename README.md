@@ -13,7 +13,7 @@ Gardener watches your couch and if it notices couchapps with npm modules bundled
 The launched node process will be given the details of the couch including the url, and optional username and password.
 
 
-Useage
+Usage
 ------
 
     npm install gardener
