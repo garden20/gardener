@@ -19,3 +19,11 @@ Usage
     npm install gardener
     ./bin/gardener watch http://me.garden20.com
 
+
+Couchapp Format
+----------------
+
+To work correctly with the gardener, your couchapp needs the following:
+
+ 1. An attachment that is a valid npm module. eg _design/myapp/myapp-1.0.1.tgz
+ 2. A property named `node_module` with a value of 'myapp-1.0.1.tgz'.
