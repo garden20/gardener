@@ -24,7 +24,8 @@
 		"nat-upnp": "0.2.9",
 		"tako": "0.3.0",
 		"is-js": "0.1.1",
-		"semver": "1.1.2"
+		"semver": "1.1.2",
+		"winston": "0.6.2"		
 	},
     "repository": {
         "type": "git",
