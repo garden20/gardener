@@ -11,6 +11,9 @@
 	"scripts" : { 
 		"start" : "node bin/gardener" 
 	},
+	"bin": {
+	    "gardener": "./bin/gardener"
+	},	
 	"directories": [
 		"bin", "lib"
 	],
