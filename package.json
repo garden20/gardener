@@ -1,6 +1,6 @@
 {
 	"name": "gardener",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "A node process manager for couchapps that have npm modules bundled with them.",
 	"keywords" : [
 		"garden", "couchapp"
