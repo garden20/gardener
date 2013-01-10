@@ -9,7 +9,7 @@
 		"garden" : "http://localhost:5984/dashboard"
 	},
 	"scripts" : { 
-		"start" : "node server.js" 
+		"start" : "node bin/gardener" 
 	},
 	"directories": [
 		"bin", "lib"
@@ -25,7 +25,8 @@
 		"tako": "0.3.0",
 		"is-js": "0.1.1",
 		"semver": "1.1.2",
-		"winston": "0.6.2"		
+		"winston": "0.6.2",
+		"args": "0.0.3"
 	},
     "repository": {
         "type": "git",
