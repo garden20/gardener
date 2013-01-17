@@ -112,5 +112,6 @@ Available OPTIONS:
 --user	The username given to the node module for connecting to couch
 --pass	The password given to the node module for connecting to couch
 --time, -t	Polling interval (seconds) to check couch for changes to design docs (integer, 30 by default)
+--stdinpass when specified, gardener will read a single line from stdin, which will be used as the password when connecting to couch
 
 ```
