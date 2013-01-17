@@ -29,7 +29,8 @@
 		"is-js": "0.1.1",
 		"semver": "1.1.2",
 		"winston": "0.6.2",
-		"args": "0.0.3"
+		"args": "0.0.3",
+		"safe-url": "0.0.0"
 	},
     "repository": {
         "type": "git",
