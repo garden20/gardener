@@ -1,6 +1,6 @@
 {
 	"name": "gardener",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"description": "A node process manager for couchapps that have npm modules bundled with them.",
 	"keywords" : [
 		"garden", "couchapp"
@@ -43,3 +43,6 @@
         "gardener": "./bin/gardener"
     }
 }
+
+
+curl -X PUT http://localhost:5984/_config/vhosts/127.0.0.1%3A5984 -H content-type:application/json  -d "\"/dashboard/_design/dashboard/_rewrite/\""
