@@ -43,6 +43,3 @@
         "gardener": "./bin/gardener"
     }
 }
-
-
-curl -X PUT http://localhost:5984/_config/vhosts/127.0.0.1%3A5984 -H content-type:application/json  -d "\"/dashboard/_design/dashboard/_rewrite/\""
