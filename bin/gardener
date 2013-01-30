@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 var path = require('path'),
-	npm_manager = require('../lib/npm_manager'),
+    npm_manager = require('../lib/npm_manager'),
     options = require('../lib/options'),
     commands = require('../lib/commands');
 
@@ -22,8 +22,8 @@ function usage() {
     console.log('  install   [ddoc_url ] ');
     console.log('  watch     [couch_url] [OPTIONS]');
     console.log('');
-    console.log('Available OPTIONS:');    
-    console.log(options.getHelp())
+    console.log('Available OPTIONS:');
+    console.log(options.getHelp());
 }
 
 if (!args.length) {
@@ -35,9 +35,9 @@ else {
         usage();
     }
     else if (cmd in commands) {
-    	npm_manager.init(function() {
-    		commands[cmd](args, commands);
-    	});        
+        npm_manager.init(function() {
+            commands[cmd](args, commands);
+        });
     }
     else {
         console.log('No such command: ' + cmd);

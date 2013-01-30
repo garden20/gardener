@@ -1,14 +1,14 @@
 gardener
 ========
 
-Grow your couchapps by using nodejs. Gardener will run node modules attached to your couchapps. 
+Grow your couchapps by using nodejs. Gardener will run node modules attached to your couchapps.
 
 
 huh?
 ----
 
 Couchapps are cool, but sometimes they are a bit limited in what they can do. So power your couchapp up with a node process!
-Gardener watches a couchdb and notices design docs with npm modules attached. It will install the npm module and run them forever. 
+Gardener watches a couchdb and notices design docs with npm modules attached. It will install the npm module and run them forever.
 
 The launched node process will be given the details of the couch including the url, and optional username and password.
 
@@ -60,13 +60,13 @@ if (process.send) process.send({ port: 38293 })
 Add a package.json file. Done
 
 
-Add to the Couchapp 
+Add to the Couchapp
 -------------------
 
 To work correctly with the gardener, your couchapp needs the following:
 
  1. An attachment that is a valid npm module. eg _design/myapp/myapp-1.0.1.tgz
-    - To create an npm module by hand, do `npm pack your_node_directory'. Then attach this to your couchapp. 
+    - To create an npm module by hand, do `npm pack your_node_directory'. Then attach this to your couchapp.
     - If you are using http://kan.so for developing couchapps, you can use the [kanso-gardener module](https://github.com/kanso/kanso-gardener)
 
  2. A property named `node_module` with the name of the attachment. eg 'myapp-1.0.1.tgz'.
@@ -101,7 +101,7 @@ Advanced Usage:
 Usage: gardener COMMAND [ARGS]
 
 Available COMMANDs:
-  install   [ddoc_url ] 
+  install   [ddoc_url ]
   watch     [couch_url] [OPTIONS]
 
 Available OPTIONS:

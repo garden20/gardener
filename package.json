@@ -5,15 +5,15 @@
 	"keywords" : [
 		"garden", "couchapp"
 	],
-	"config" : { 
+	"config" : {
 		"garden" : "http://localhost:5984/dashboard"
 	},
-	"scripts" : { 
-		"start" : "node bin/gardener" 
+	"scripts" : {
+		"start" : "node bin/gardener"
 	},
 	"bin": {
 	    "gardener": "./bin/gardener"
-	},	
+	},
 	"directories": [
 		"bin", "lib"
 	],
@@ -38,7 +38,7 @@
     },
     "maintainers": [
         {"name": "Ryan Ramage", "web": "https://github.com/ryanramage"}
-    ],    
+    ],
     "bin": {
         "gardener": "./bin/gardener"
     }
