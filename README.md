@@ -110,7 +110,8 @@ Available OPTIONS:
 --port, -p	The port to bind the http server to. (integer, 25984 by default)
 --upnp	Use upnp to open the port on the firewall, and use the public ip ("true" or "false", "false" by default)
 --user	The username given to the node module for connecting to couch
---pass	The password given to the node module for connecting to couch
+--pass  The password given to the node module for connecting to couch
+--poll, -l  Force polling for design doc changes, even on a couch with a dashboard db ("true" or "false", "false" by default)
 --time, -t	Polling interval (seconds) to check couch for changes to design docs (integer, 30 by default)
 --stdinpass when specified, gardener will read a single line from stdin, which will be used as the password when connecting to couch
 
