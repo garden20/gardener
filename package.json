@@ -1,9 +1,9 @@
 {
 	"name": "gardener",
-	"version": "0.0.8",
+	"version": "0.0.9",
 	"description": "A node process manager for couchapps that have npm modules bundled with them.",
 	"keywords" : [
-		"garden", "couchapp"
+		"garden", "couchapp", "couchdb"
 	],
 	"config" : {
 		"garden" : "http://localhost:5984/dashboard"
