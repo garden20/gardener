@@ -45,7 +45,7 @@ Examples:
 Dashboard Style
 ---------------
 
-Adding the --dashboard-db tell gardener will only watch the specified db in a changes style feed. It is assumed the documents in this database are install docs that are generated from [garden app installer](https://github.com/garden20/garden-core). The advantage of this appoach is that the installation progress can be given to a webui because progress is updated on the install doc.
+Adding the --dashboard-db tell gardener will watch the specified db in a changes style feed. It is assumed the documents in this database are install docs that are generated from [garden app installer](https://github.com/garden20/garden-core). The advantage of this appoach is that the installation progress can be given to a webui because progress is updated on the install doc.
 
 1. Watch only the dashboard db using, following the changes feed. First style.
 

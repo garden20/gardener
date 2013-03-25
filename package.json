@@ -1,6 +1,6 @@
 {
 	"name": "gardener",
-	"version": "0.0.10",
+	"version": "0.1.0",
 	"description": "A node process manager for couchapps that have npm modules bundled with them.",
 	"keywords" : [
 		"garden", "couchapp", "couchdb"
@@ -18,7 +18,7 @@
 		"bin", "lib"
 	],
 	"dependencies": {
-		"async": "0.1.22",
+		"async": "0.2.6",
 		"follow": "0.8.0",
 		"forever-monitor": "1.1.0",
 		"npm": "1.1.70",
@@ -30,7 +30,8 @@
 		"semver": "1.1.2",
 		"winston": "0.6.2",
 		"args": "0.0.3",
-		"safe-url": "0.0.0"
+		"safe-url": "0.0.0",
+        "underscore": "1.4.4"
 	},
     "repository": {
         "type": "git",
