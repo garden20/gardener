@@ -9,7 +9,8 @@
 		"garden" : "http://localhost:5984/dashboard"
 	},
 	"scripts" : {
-		"start" : "node bin/gardener"
+		"start" : "node bin/gardener",
+        "test" : "make test"
 	},
 	"bin": {
 	    "gardener": "./bin/gardener"
@@ -33,6 +34,9 @@
 		"safe-url": "0.0.0",
         "underscore": "1.4.4"
 	},
+    "devDependencies" : {
+        "mocha": "1.8.2"
+    },
     "repository": {
         "type": "git",
         "url": "http://github.com/garden20/gardener.git"
