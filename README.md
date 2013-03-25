@@ -3,6 +3,9 @@ gardener
 
 Grow your couchdb by using nodejs. Gardener will run node apps that your couchapp/design-doc depend on.
 
+**Warning** docs below are for an unpublished version. Latest publised docs can be found in the [0.0.10 branch](https://github.com/garden20/gardener/tree/0.0.10)
+
+
 Simple. Just add an extra propery on your design doc. A simple one might look like:
 
 ```
