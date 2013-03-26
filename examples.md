@@ -49,7 +49,7 @@ Adding the --dashboard-db tell gardener will watch the specified db in a changes
 
 1. Watch only the dashboard db using, following the changes feed. First style.
 
-    > gardener http://localhost:5984/ --dashboard-db=dashboard --include=dashboard
+    > gardener http://localhost:5984/ --dashboard=dashboard --include=dashboard
 
 2. Watch only the dashboard db using, following the changes feed. Second style.
 
@@ -57,7 +57,7 @@ Adding the --dashboard-db tell gardener will watch the specified db in a changes
 
 3. Scan all design docs inside of all databases, but for the dashboard db follow the changes feed.
 
-    > gardener http://localhost:5984/ --dashboard-db=dashboard
+    > gardener http://localhost:5984/ --dashboard=dashboard
 
 
 Errors
