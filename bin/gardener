@@ -16,6 +16,16 @@ if (!args.length) {
     return usage();
 }
 
+try {
+    require('npm');
+} catch(e) {
+    console.log('ERROR: Cant find npm');
+    console.log('  solution 1: ln -s  /usr/local/lib/node_modules/npm/ node_modules/npm');
+    console.log('  solution 2: npm install npm');
+    return;
+}
+
+
 var url = args[0];
 var opts = args.slice(1);
 options.set_options(opts);

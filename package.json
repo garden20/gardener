@@ -22,21 +22,16 @@
 		"async": "0.2.6",
 		"follow": "0.8.0",
 		"forever-monitor": "1.1.0",
-		"npm": "1.1.70",
 		"request": "2.12.0",
 		"url": "0.7.9",
-		"nat-upnp": "0.2.9",
-		"tako": "0.3.0",
 		"is-js": "0.1.1",
 		"semver": "1.1.2",
 		"winston": "0.6.2",
 		"args": "0.0.3",
 		"safe-url": "0.0.0",
-        "underscore": "1.4.4"
+        "underscore": "1.4.4",
+        "npm": ">=1.1.0"
 	},
-    "devDependencies" : {
-        "mocha": "1.8.2"
-    },
     "repository": {
         "type": "git",
         "url": "http://github.com/garden20/gardener.git"

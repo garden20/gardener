@@ -71,6 +71,7 @@ So like, what could I do with it?
 
 Here are just some ideas you could distribute directly with your couchapp, you can extrapolate:
 
+ - use existing workers from [hoodie](https://github.com/hoodiehq) or [null2/jo](https://github.com/null2/couchdb-worker)
  - [Make a queue service](https://github.com/iriscouch/cqs)
  - [RSS feed archiving](https://github.com/maxogden/couchpubtato)
  - [download all the things](https://github.com/maxogden/download-all-the-things)
@@ -101,4 +102,26 @@ Available OPTIONS:
 ```
 
 see [examples](./examples.md) for examples of commandline usage.
+
+
+Slim
+----
+
+To reduce the footprint of gardener dependencies, not all are listed in the dependencies section. To use some features you will have to do an addition npm install.
+
+  - web, you need to ```npm install tako```
+  - upnp, you need to ```npm install nat-upnp```
+  - testing (or make or npm test) ```npm install mocha```
+
+I am probably doing this wrong. Please let me know a better solution.
+
+
+
+About Version Numbers
+----------------------
+
+gardener follows [semver-ftw](http://semver-ftw.org/). Dont think 1.0.0 means production ready yet. There were some breaking changes, so had to move up the major version.
+
+
+
 
