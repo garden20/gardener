@@ -14,7 +14,7 @@ Simple. Just add an extra propery on your design doc. A simple one might look li
     "views" : {
         "map" : "by_date" : "function(doc) { emit(doc.date, null); }"
     }
-    "node_modules" : "twitter-loader"
+    "node_modules" : "twitter-loader,worker-generate-thumbnails"
   }
 
 ```
