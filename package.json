@@ -3,32 +3,32 @@
 	"version": "1.0.0",
 	"description": "A node process manager for couchapps that depend on npm modules, or have npm modules bundled with them.",
 	"keywords" : [
-		"garden", "couchapp", "couchdb"
+        "garden", "couchapp", "couchdb"
 	],
 	"config" : {
-		"garden" : "http://localhost:5984/dashboard"
+        "garden" : "http://localhost:5984/dashboard"
 	},
 	"scripts" : {
-		"start" : "node bin/gardener",
+        "start" : "node bin/gardener",
         "test" : "make test"
 	},
 	"bin": {
-	    "gardener": "./bin/gardener"
+        "gardener": "./bin/gardener"
 	},
 	"directories": [
-		"bin", "lib"
+        "bin", "lib"
 	],
 	"dependencies": {
-		"async": "0.2.6",
-		"follow": "0.8.0",
-		"forever-monitor": "1.1.0",
-		"request": "2.12.0",
-		"url": "0.7.9",
-		"is-js": "0.1.1",
-		"semver": "1.1.2",
-		"winston": "0.6.2",
-		"args": "0.0.3",
-		"safe-url": "0.0.0",
+        "async": "0.2.6",
+        "follow": "0.8.0",
+        "forever-monitor": "1.1.0",
+        "request": "2.12.0",
+        "url": "0.7.9",
+        "is-js": "0.1.1",
+        "semver": "1.1.2",
+        "winston": "0.6.2",
+        "args": "0.0.3",
+        "safe-url": "0.0.0",
         "underscore": "1.4.4",
         "npm": ">=1.1.0"
 	},
@@ -37,7 +37,10 @@
         "url": "http://github.com/garden20/gardener.git"
     },
     "maintainers": [
-        {"name": "Ryan Ramage", "web": "https://github.com/ryanramage"}
+        {
+            "name": "Ryan Ramage",
+            "web": "https://github.com/ryanramage"
+        }
     ],
     "bin": {
         "gardener": "./bin/gardener"
