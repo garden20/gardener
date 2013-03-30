@@ -11,8 +11,8 @@ Point a gardener at couchdb and it will install, update, and run node processes 
 Usage
 ------
 
-    npm install gardener
-    ./bin/gardener http://admin:pass@localhost:5984
+    npm install gardener -g
+    gardener http://admin:pass@localhost:5984
 
 This tells the gardener to watch all the databases on your local couch. But what does it do?
 
@@ -33,7 +33,7 @@ Simple. It looks for ```node_modules``` on design docs. Like this:
 In this case, gardener will npm install twitter-loader and worker-generate-thumbnails and run them. Gardener passes them the couch url, and optional username and password. It will look something like this:
 
 ```
-gardener$ ./bin/gardener http://localhost:5984
+$ gardener http://localhost:5984
 info: [gardener] polling couch for design doc changes.
 info: [gardener] installing twitter-loader-1.0.1.tgz start_immediate=true, module_digest=md5-COu0+gC6Cvk+UPOB3yz6iQ==, module_name=twitter-loader-1.0.1.tgz, package_version=1.0.1, local_name=aHR0cDovL2xvY2FsaG9zdDo1OTg0L3Rlc3QvX2Rlc2lnbi9tdWNreW11Y2s=, ddoc_url=http://localhost:5984/test/_design/myapp, db_url=http://localhost:5984/test
 npm http GET https://registry.npmjs.org/twitter-loader
