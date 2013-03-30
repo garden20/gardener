@@ -1,27 +1,12 @@
 gardener
 ========
 
-Grow your couchdb by using nodejs. Gardener will run node apps that your couchapp/design-doc depend on.
+Point a gardener at couchdb and it will install, update, and run node processes that design-docs and couchapps depend on.
+
+![gardener](http://openclipart.org/people/johnny_automatic/johnny_automatic_a_pixie_waters.svg)
 
 [![Build Status](https://secure.travis-ci.org/garden20/gardener.png)](http://travis-ci.org/garden20/gardener)
 
-**Warning** docs below are for an unpublished version. Latest publised docs can be found in the [0.0.10 branch](https://github.com/garden20/gardener/tree/0.0.10)
-
-
-Simple. Just add an extra propery on your design doc. A simple one might look like:
-
-```
-  {
-    "id": "_design/twitter_things",
-    "views" : {
-        "map" : "by_date" : "function(doc) { emit(doc.date, null); }"
-    }
-    "node_modules" : "twitter-loader,worker-generate-thumbnails"
-  }
-
-```
-
-In this case, gardener will basically 'npm install twitter-loader'. It will run it using 'forever', and it passes the couch details to twitter-loader with the couch url, and optional username and password.
 
 Usage
 ------
@@ -29,13 +14,41 @@ Usage
     npm install gardener
     ./bin/gardener http://admin:pass@localhost:5984
 
-gardener watch all databases on your local couch.
+This tells the gardener to watch all the databases on your local couch. But what does it do?
 
 
+Simple. It looks for ```node_modules``` on design docs. Like this:
+
+```
+  {
+    "id": "_design/twitter_things",
+    "views" : {
+        "map" : "by_date" : "function(doc) { emit(doc.date, null); }"
+    }
+    "node_modules" : "twitter-loader,worker-generate-thumbnails@0.4.6"
+  }
+
+```
+
+In this case, gardener will npm install twitter-loader and worker-generate-thumbnails and run them. Gardener passes them the couch url, and optional username and password. It will look something like this:
+
+```
+gardener$ ./bin/gardener http://localhost:5984
+info: [gardener] polling couch for design doc changes.
+info: [gardener] installing twitter-loader-1.0.1.tgz start_immediate=true, module_digest=md5-COu0+gC6Cvk+UPOB3yz6iQ==, module_name=twitter-loader-1.0.1.tgz, package_version=1.0.1, local_name=aHR0cDovL2xvY2FsaG9zdDo1OTg0L3Rlc3QvX2Rlc2lnbi9tdWNreW11Y2s=, ddoc_url=http://localhost:5984/test/_design/myapp, db_url=http://localhost:5984/test
+npm http GET https://registry.npmjs.org/twitter-loader
+npm http 200 https://registry.npmjs.org/twitter-loader/twitter-loader-1.0.1.tgz
+npm WARN package.json twitter-loader@1.0.1 No README.md file found!
+twitter-loader@1.0.1 installed_packages/node_modules/twitter-loader
+info: [gardener] starting package [twitter-loader] in working_dir/aHR0cDovL2xvY2FsaG9zdDo1OTg0L3Rlc3QvX2Rlc2lnbi9tdWNreW11Y2s=
+info: [twitter-loader] Twitter loader is dumping tweets into http://localhost:5984/test
+
+```
+Yay, twitter loader has been installed, run, and hooked up to the right db.
 
 
-Sample Node Program
---------------------
+How-to Node Program
+-------------------
 
 Create a directory called 'twitter-loader'. Add `server.js` to it that looks like:
 
@@ -51,21 +64,6 @@ load_all_of_twitter(db_url);
 Add a package.json file. npm publish.
 
 
-Running gardener will produce the following:
-
-
-```
-gardener$ ./bin/gardener http://localhost:5984
-info: [gardener] http server started on port: 25984
-info: [gardener] polling couch for design doc changes.
-info: [gardener] installing twitter-loader-1.0.1.tgz start_immediate=true, module_digest=md5-COu0+gC6Cvk+UPOB3yz6iQ==, module_name=twitter-loader-1.0.1.tgz, package_version=1.0.1, local_name=aHR0cDovL2xvY2FsaG9zdDo1OTg0L3Rlc3QvX2Rlc2lnbi9tdWNreW11Y2s=, ddoc_url=http://localhost:5984/test/_design/myapp, db_url=http://localhost:5984/test
-npm http GET https://registry.npmjs.org/twitter-loader
-npm http 200 https://registry.npmjs.org/twitter-loader/twitter-loader-1.0.1.tgz
-npm WARN package.json twitter-loader@1.0.1 No README.md file found!
-twitter-loader@1.0.1 installed_packages/node_modules/twitter-loader
-info: [gardener] starting package [twitter-loader] in working_dir/aHR0cDovL2xvY2FsaG9zdDo1OTg0L3Rlc3QvX2Rlc2lnbi9tdWNreW11Y2s=
-
-```
 
 
 So like, what could I do with it?
