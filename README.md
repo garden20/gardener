@@ -63,13 +63,15 @@ load_all_of_twitter(db_url);
 
 Add a package.json file. npm publish.
 
-
+(When publishing try to use the couchdb-worker tag so it is easy for others to find and resuse).
 
 
 So like, what could I do with it?
 -------------------------------
 
-Here are just some ideas you could distribute directly with your couchapp, you can extrapolate:
+Use some existing workers on npm: [tagged couchdb-worker on npm](https://npmjs.org/browse/keyword/couchdb-worker)
+
+Here are just some ideas, you can extrapolate:
 
  - use existing workers from [hoodie](https://github.com/hoodiehq) or [null2/jo](https://github.com/null2/couchdb-worker)
  - [Make a queue service](https://github.com/iriscouch/cqs)
