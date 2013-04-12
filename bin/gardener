@@ -35,3 +35,9 @@ new Gardener(url, options).start(function(err){
 });
 
 
+// this is poor show.
+// When couch goes down, all the follower throw an exception. Must catch it better, and in the right place
+
+process.on('uncaughtException', function(err) {
+  console.log('Caught exception: ' + err);
+});

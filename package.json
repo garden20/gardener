@@ -20,7 +20,7 @@
     ],
     "dependencies": {
         "async": "0.2.6",
-        "follow": "0.8.0",
+        "follow": "0.9.0",
         "forever-monitor": "1.1.0",
         "request": "2.12.0",
         "url": "0.7.9",
