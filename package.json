@@ -1,48 +1,49 @@
 {
-    "name": "gardener",
-    "version": "1.0.2",
-    "description": "A node process manager for couchapps that depend on npm modules, or have npm modules bundled with them.",
-    "keywords" : [
-        "garden", "couchapp", "couchdb"
-    ],
-    "config" : {
-        "garden" : "http://localhost:5984/dashboard"
-    },
-    "scripts" : {
-        "start" : "node bin/gardener",
-        "test" : "make test"
-    },
-    "bin": {
-        "gardener": "./bin/gardener"
-    },
-    "directories": [
-        "bin", "lib"
-    ],
-    "dependencies": {
-        "async": "0.2.6",
-        "follow": "0.8.0",
-        "forever-monitor": "1.1.0",
-        "request": "2.12.0",
-        "url": "0.7.9",
-        "semver": "1.1.2",
-        "winston": "0.6.2",
-        "args": "0.0.3",
-        "safe-url": "0.0.0",
-        "underscore": "1.4.4",
-        "rimraf": "2.1.4",
-        "npm": ">=1.1.0"
-    },
-    "repository": {
-        "type": "git",
-        "url": "http://github.com/garden20/gardener.git"
-    },
-    "maintainers": [
-        {
-            "name": "Ryan Ramage",
-            "web": "https://github.com/ryanramage"
-        }
-    ],
-    "bin": {
-        "gardener": "./bin/gardener"
+  "name": "gardener",
+  "version": "1.0.3",
+  "description": "A node process manager for couchapps that depend on npm modules, or have npm modules bundled with them.",
+  "keywords": [
+    "garden",
+    "couchapp",
+    "couchdb"
+  ],
+  "config": {
+    "garden": "http://localhost:5984/dashboard"
+  },
+  "scripts": {
+    "start": "node bin/gardener",
+    "test": "make test"
+  },
+  "bin": {
+    "gardener": "./bin/gardener"
+  },
+  "directories": [
+    "bin",
+    "lib"
+  ],
+  "dependencies": {
+    "async": "0.2.6",
+    "follow": "0.8.0",
+    "forever-monitor": "1.1.0",
+    "request": "2.12.0",
+    "url": "0.7.9",
+    "semver": "1.1.2",
+    "winston": "0.7.1",
+    "args": "0.0.3",
+    "safe-url": "0.0.0",
+    "underscore": "1.4.4",
+    "rimraf": "2.1.4",
+    "npm": ">=1.1.0",
+    "mkdirp": "~0.3.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/garden20/gardener.git"
+  },
+  "maintainers": [
+    {
+      "name": "Ryan Ramage",
+      "web": "https://github.com/ryanramage"
     }
+  ]
 }
