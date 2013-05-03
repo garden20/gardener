@@ -243,5 +243,13 @@ describe('Filter ddocs from all design docs', function(){
 
 });
 
+describe('utils', function(){
+    it('should get the ddoc name', function(){
+        var ddoc = 'http://localhost:5984/kujua-base/_design/kujua-base';
+        var result = utils.get_ddoc_name(ddoc);
+        assert.equal('kujua-base', result);
+    });
+});
+
 
 
