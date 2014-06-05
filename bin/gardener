@@ -19,9 +19,9 @@ if (!args.length) {
 try {
     require('npm');
 } catch(e) {
-    console.log('ERROR: Cant find npm');
-    console.log('  solution 1: ln -s  /usr/local/lib/node_modules/npm/ node_modules/npm');
-    console.log('  solution 2: npm install npm');
+    console.log('ERROR: Failed to require() npm');
+    console.log('  Solution 1: ln -s  /usr/local/lib/node_modules/npm/ node_modules/npm');
+    console.log('  Solution 2: npm install npm');
     return;
 }
 
@@ -32,7 +32,7 @@ options.set_options(opts);
 
 new Gardener(url, options).start(function(err){
     if (err) console.log(err);
-    console.log('Gardener started successful. Logs in:', options.get_options_value('logdir'));
+    console.log('Gardener started successfully. Logs in:', options.get_options_value('logdir'));
 });
 
 
