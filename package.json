@@ -24,7 +24,7 @@
   "dependencies": {
     "async": "0.2.6",
     "follow": "0.8.0",
-    "forever-monitor": "1.1.0",
+    "forever-monitor": "1.2.3",
     "request": "2.12.0",
     "url": "0.7.9",
     "semver": "1.1.2",
