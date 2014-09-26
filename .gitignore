@@ -2,3 +2,4 @@ installed_packages
 npm-debug.log
 working_dir
 logs
+node_modules
