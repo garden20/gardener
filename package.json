@@ -36,6 +36,9 @@
     "npm": ">=1.1.0",
     "mkdirp": "~0.3.5"
   },
+  "devDependencies": {
+    "mocha": "~1.20"
+  },
   "repository": {
     "type": "git",
     "url": "http://github.com/garden20/gardener.git"
