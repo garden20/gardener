@@ -3,7 +3,7 @@ gardener
 
 Point a gardener at couchdb and it will install, update, and run node processes that design-docs and couchapps depend on.
 
-![gardener](http://openclipart.org/people/johnny_automatic/johnny_automatic_a_pixie_waters.svg)
+![gardener](https://openclipart.org/people/johnny_automatic/johnny_automatic_a_pixie_waters.svg)
 
 [![Build Status](https://secure.travis-ci.org/garden20/gardener.png)](http://travis-ci.org/garden20/gardener)
 
